@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row align-items-end">
+    <!-- <div *ngFor="let box of boxes" class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements" -->
+    <div *ngFor="let box of boxes" class="col-md-6 col-lg-4">
+      <mat-card> </mat-card>
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar></div>
+          <mat-card-title>{{ box.name }}</mat-card-title>
+          <mat-card-subtitle>{{ box.type }}</mat-card-subtitle>
+        </mat-card-header>
+        <div mat-card-image></div>
+        <mat-card-content>
+          <p>
+            {{ box.description }}
+          </p>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <a
+            mat-icon-button
+            [href]=""
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <!-- <fa-icon [icon]="['fab', 'cart']"></fa-icon> -->
+          </a>
+          <a
+            *ngIf="box.type"
+            mat-button
+            [href]="box.type"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <!-- <fa-icon [icon]="['fab', 'medium-m']"></fa-icon>Medium -->
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
